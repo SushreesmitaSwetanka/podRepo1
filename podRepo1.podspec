@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "podRepo1"
   s.version      = "0.0.1"
-  s.summary      = ""
+  s.summary      = 'Sushree'
 
   s.description  = <<-DESC
                    A longer description of podRepo1 in Markdown format.
@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = "MIT"
+  # s.license      = :type => "MIT"
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,12 +65,11 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, '7.0'
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-
+  # s.ios.deployment_target = '7.0'
+   s.osx.deployment_target = '10.9'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,7 +77,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/SushreesmitaSwetanka/podRepo1.git", :commit => "8768a38d91bb664fef28dc348e53cda17e139877" }
+  s.source       = { :git => 'http://rsjs001:7990/scm/boot/rcrai.git' }
+  s.dependency 'TestFlightSDK', '~> 3.0.2'
+  s.dependency 'BugSense', '~> 3.6'
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = '**/*.{h,m}'
+  s.exclude_files = 'Classes/Exclude'
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -118,8 +119,8 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
+  # s.library   = 'iconv'
+  # s.libraries = 'iconv', 'xml2'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -128,9 +129,10 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
+	s.requires_arc = true
   # s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  # s.xcconfig = { 'HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2' }
+  # s.dependency 'JSONKit', '~> 1.4'
 
 end
